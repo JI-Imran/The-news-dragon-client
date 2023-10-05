@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ListGroup } from 'react-bootstrap';
+import { Button, ButtonToolbar, Card, ListGroup } from 'react-bootstrap';
 import { FaFacebook, FaGithub, FaGoogle, FaInstagram, FaTwitter } from 'react-icons/fa';
 import QZone from '../QZone/QZone';
 import bg from '../../../assets/bg.png'
@@ -19,12 +19,19 @@ const RightNav = () => {
     </ListGroup>
       </div>
       <QZone />
-      <div className='text-danger'>
-        <img src={bg} alt="" />
-        <div className="card-img-overlay">
-    <h5 className="card-title">Card title</h5>
-  </div>
-      </div>
+
+      <Card className="bg-dark text-white text-center">
+      <Card.Img src={bg} alt="Card image" />
+      <Card.ImgOverlay>
+        <h1>Create an Amazing Newspaper</h1>
+        <p className='mt-4'>
+          Discover thousands of options, easy to customize layouts, one-click to import demo and much more.
+        </p>
+        <Button variant='danger' className='mt-5'>Learn More</Button>
+      </Card.ImgOverlay>
+    </Card>
+
+
         </div>
     );
 };
